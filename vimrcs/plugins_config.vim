@@ -14,9 +14,6 @@ call pathogen#infect(s:vim_runtime.'/sources_non_forked/{}')
 call pathogen#infect(s:vim_runtime.'/my_plugins/{}')
 call pathogen#helptags()
 
-<<<<<<< HEAD
-=======
-
 """"""""""""""""""""""""""""""
 " => bufExplorer plugin
 """"""""""""""""""""""""""""""
@@ -26,7 +23,6 @@ let g:bufExplorerFindActive=1
 let g:bufExplorerSortBy='name'
 map <leader>o :BufExplorer<cr>
 
->>>>>>> 5108ca4ec066ed9b93bab2c7f5b0d37d244ac0a9
 
 """"""""""""""""""""""""""""""
 " => MRU plugin
@@ -47,25 +43,23 @@ nmap <C-n> <Plug>yankstack_substitute_newer_paste
 """"""""""""""""""""""""""""""
 " => FZF
 """"""""""""""""""""""""""""""
-<<<<<<< HEAD
 nnoremap <C-f> :Files<Cr>
 nmap <Leader>o :Buffers<CR>
 nnoremap <Leader>g :Ag<CR>
 set rtp+=/usr/local/opt/fzf
-=======
-let g:ctrlp_working_path_mode = 0
+" TODO: did we switch to CTRLP?
+" let g:ctrlp_working_path_mode = 0
 
-" Quickly find and open a file in the current working directory
-let g:ctrlp_map = '<C-f>'
-map <leader>j :CtrlP<cr>
+" " Quickly find and open a file in the current working directory
+" let g:ctrlp_map = '<C-f>'
+" map <leader>j :CtrlP<cr>
 
-" Quickly find and open a buffer
-map <leader>b :CtrlPBuffer<cr>
+" " Quickly find and open a buffer
+" map <leader>b :CtrlPBuffer<cr>
 
-let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+" let g:ctrlp_max_height = 20
+" let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 
->>>>>>> 5108ca4ec066ed9b93bab2c7f5b0d37d244ac0a9
 
 """"""""""""""""""""""""""""""
 " => ZenCoding
