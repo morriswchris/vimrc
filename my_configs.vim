@@ -43,3 +43,6 @@ let &t_8b = "\e[48;2;%lu;%lu;%lum"
 map <Leader>d :bufdo bd!<CR>
 map <C-W>` gg=G<C-o><C-o>
 autocmd FileType vue syntax sync fromstart
+
+highlight clear SpellBad
+highlight SpellBad ctermfg=0 ctermbg=217
