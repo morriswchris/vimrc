@@ -17,3 +17,6 @@
 [submodule "my_plugins/vim-liquid"]
 	path = my_plugins/vim-liquid
 	url = https://github.com/tpope/vim-liquid.git
+[submodule "my_plugins/vimwiki"]
+	path = my_plugins/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git

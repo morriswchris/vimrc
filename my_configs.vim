@@ -29,6 +29,7 @@ let g:terminal_ansi_colors = [
                 \ "#78c2ff", "#ae81ff", "#85dc85", "#e2637f"
                 \]
 setlocal foldmethod=manual
+set nocompatible
 set mouse=a
 set number
 set foldlevel=99999
@@ -46,3 +47,21 @@ autocmd FileType vue syntax sync fromstart
 
 highlight clear SpellBad
 highlight SpellBad ctermfg=0 ctermbg=217
+
+filetype plugin on
+syntax on
+
+
+function! SetVimScriptConfig(index, path)
+  return {'syntax': 'markdown', 'ext': '.md', 'path': a:path}
+endfunction
+
+let vim_wiki_default_config = {'syntax': 'markdown', 'ext': '.md'}
+let vim_wiki_config = [vim_wiki_default_config] 
+
+if $VIM_WIKI_PATHS != ""
+  let vim_wiki_config = []
+  let vim_wiki_paths = split($VIM_WIKI_PATHS, ",")
+  let  vim_wiki_config = map(vim_wiki_paths, function("SetVimScriptConfig"))
+endif
+let g:vimwiki_list = vim_wiki_config
