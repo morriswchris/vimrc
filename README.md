@@ -29,7 +29,19 @@ To install for multiple users, the repository needs to be cloned to a location a
 	
 Naturally, `/opt/vim_runtime` can be any directory, as long as all the users specified have read access.
 
-In order to have certain ENVs work with MacVim, you must symlink your zshrc: 
+### VimWiki
+
+[VimiWiki](https://github.com/vimwiki/vimwiki) comes included with this version of vim. By default, [VimiWiki](https://github.com/vimwiki/vimwiki#basic-key-bindings) will look in your user folder for the `vimwiki` directory, or create a new one. This version of vim also supports setting multiple vim wikis by specifying the `$VIM_WIKI_PATHS` ENV, using a comma separated list:
+
+```shell
+VIM_WIKI_PATHS=~/wiki/personal,~/wiki/work vim
+```
+
+You can also `export` this ENV, and have it used each time you start a new vim session
+
+### Mac OS Support
+
+In order to have certain ENVs work with GUI versions of vim (such as MacVim), you must symlink your zshrc (or other shell config): 
 
 ```shell
 ln -s ~/.zshrc ~/.zprofile
