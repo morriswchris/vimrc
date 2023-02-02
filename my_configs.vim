@@ -45,9 +45,6 @@ map <Leader>d :bufdo bd!<CR>
 map <C-W>` gg=G<C-o><C-o>
 autocmd FileType vue syntax sync fromstart
 
-highlight clear SpellBad
-highlight SpellBad ctermfg=0 ctermbg=217
-
 filetype plugin on
 syntax on
 
@@ -65,3 +62,13 @@ if $VIM_WIKI_PATHS != ""
   let  vim_wiki_config = map(vim_wiki_paths, function("SetVimScriptConfig"))
 endif
 let g:vimwiki_list = vim_wiki_config
+
+highlight clear SpellBad
+highlight clear SpellLocal
+highlight clear SpellRare
+highlight clear SpellCap
+hi SpellBad cterm=underline  gui=Undercurl ctermbg=103  guibg=#8787af
+hi SpellLocal cterm=underline gui=Undercurl ctermbg=103  guibg=#8787af
+hi SpellRare cterm=underline gui=Undercurl ctermbg=103  guibg=#8787af
+hi SpellCap cterm=underline  gui=Undercurl ctermbg=103  guibg=#8787af
+
