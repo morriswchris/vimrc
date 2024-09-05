@@ -20,3 +20,12 @@
 [submodule "my_plugins/vimwiki"]
 	path = my_plugins/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
+[submodule "my_plugins/codeium.vim"]
+	path = my_plugins/codeium.vim
+	url = https://github.com/Exafunction/codeium.vim
+[submodule "my_plugins/vim-macdown"]
+	path = my_plugins/vim-macdown
+	url = https://github.com/hashrocket/vim-macdown.git
+[submodule "my_plugins/macdown.vim"]
+	path = my_plugins/macdown.vim
+	url = https://github.com/neoclide/macdown.vim.git
