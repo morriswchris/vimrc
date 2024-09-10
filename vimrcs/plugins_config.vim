@@ -43,10 +43,10 @@ nmap <C-n> <Plug>yankstack_substitute_newer_paste
 """"""""""""""""""""""""""""""
 " => FZF
 """"""""""""""""""""""""""""""
+set rtp+=/opt/homebrew/opt/fzf
 nnoremap <C-f> :Files<Cr>
 nmap <Leader>o :Buffers<CR>
-nnoremap <Leader>g :Ag<CR>
-set rtp+=/usr/local/opt/fzf
+nnoremap <Leader>g :Rg<CR>
 " TODO: did we switch to CTRLP?
 " let g:ctrlp_working_path_mode = 0
 
