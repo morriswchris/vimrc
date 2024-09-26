@@ -30,3 +30,6 @@
 	path = my_plugins/macdown.vim
 	url = https://github.com/neoclide/macdown.vim.git
 
+[submodule "my_plugins/copilot.vim"]
+	path = my_plugins/copilot.vim
+	url = https://github.com/github/copilot.vim.git
