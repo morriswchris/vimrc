@@ -1,4 +1,4 @@
-colorscheme snazzy
+colorscheme dracula
 let g:lightline = {
 \ 'colorscheme': 'snazzy',
 \ 'active': {
@@ -14,6 +14,17 @@ let g:terminal_ansi_colors = [
                 \ "#f09479", "#f74782", "#42cf89", "#cfcfb0",
                 \ "#78c2ff", "#ae81ff", "#85dc85", "#e2637f"
                 \]
+
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+if &term =~ "screen"
+    let &t_BE = "\e[?2004h"
+    let &t_BD = "\e[?2004l"
+    exec "set t_PS=\e[200~"
+    exec "set t_PE=\e[201~"
+endif
 
 """"""""""""""""""""""""""""""
 " => FZF
@@ -44,7 +55,7 @@ let g:fzf_preview_window = []
 set nocompatible
 set mouse=a
 set number
-" set foldlevel=99999
+set foldlevel=20
 set shiftwidth=2
 set tabstop=2
 set nofoldenable
