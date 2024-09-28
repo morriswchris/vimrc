@@ -86,6 +86,10 @@ if $VIM_WIKI_PATHS != ""
 endif
 let g:vimwiki_list = vim_wiki_config
 
+" imap <silent><script><expr> <C-g> copilot#Accept("\<CR>")
+" let g:copilot_no_tab_map = v:true
+
+let b:copilot_enabled = v:false
 let g:codeium_no_map_tab = 1
 imap <script><silent><nowait><expr> <C-g> codeium#Accept()
 imap <C-e>   <Cmd>call codeium#CycleCompletions(1)<CR>
